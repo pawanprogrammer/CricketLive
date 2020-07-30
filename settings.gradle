@@ -1,0 +1,2 @@
+rootProject.name='Cricket Live'
+include ':app'
