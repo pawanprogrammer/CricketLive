@@ -49,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
                 /*show the server data into textview*/
                 DataModel dataModel = new DataModel();
                 dataModel.dataparsing(response);
+
+                /*to pass the data from data model to adapter class*/
+                MyAdapter myAdapter = new MyAdapter(getApplicationContext(), DataModel.title/*pawan*/, DataModel.date);
+                /*to display the data into recyclerview*/
+                recyclerView.setAdapter(myAdapter);
             }
         }, new Response.ErrorListener() {
             @Override
